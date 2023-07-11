@@ -11,6 +11,10 @@ struct ContentView: View {
     var body: some View {
         Image("Matty")
             .resizable()
+            .cornerRadius(10.0)
+            .aspectRatio(contentMode: .fit)
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+
     }
 }
 
