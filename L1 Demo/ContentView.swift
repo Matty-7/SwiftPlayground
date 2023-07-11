@@ -9,12 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image("Matty")
-            .resizable()
-            .cornerRadius(10.0)
-            .aspectRatio(contentMode: .fit)
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+             
+            VStack {
+                
+                Image("Matty")
+                    .resizable()
+                    .cornerRadius(10.0)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                Text("Matty")
+                    .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.white)
+            }
+        }
+        
     }
 }
 
