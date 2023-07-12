@@ -11,27 +11,49 @@ struct ContentView: View {
     @State private var isScaled = false
 
     var body: some View {
-        ZStack {
-            Color(.black)
+        ZStack{
+            Image("background-plain")
+                .resizable()
                 .ignoresSafeArea()
-            
             VStack {
-                Image("Matty")
-                    .resizable()
-                    .cornerRadius(10.0)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                Text("Matty")
-                    .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.white)
-                    .scaleEffect(isScaled ? 2 : 1)
-                    .onTapGesture {
-                        withAnimation(.easeInOut(duration: 1.0)) {
-                            isScaled.toggle()
-                        }
+                Spacer()
+                Image("logo")
+                Spacer()
+                HStack{
+                    Spacer()
+                    Image("card2")
+                    Spacer()
+                    Image("card3")
+                    Spacer()
+                }
+                Spacer()
+                Image("button")
+                Spacer()
+                HStack{
+                    Spacer()
+                    VStack{
+                        Text("Player")
+                            .font(.headline)
+                            .padding(.bottom, 10.0)
+                        Text("0")
+                            .font(.largeTitle)
                     }
+                    Spacer()
+                    VStack{
+                        Text("CPU")
+                            .font(.headline)
+                            .padding(.bottom, 10.0)
+
+                        Text("0")
+                            .font(.largeTitle)
+                    }
+                    Spacer()
+                }
+                .foregroundColor(.white)
+                Spacer()
+                 
             }
+            
         }
     }
 }
